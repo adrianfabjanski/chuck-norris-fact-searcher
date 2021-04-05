@@ -6,7 +6,7 @@ import Pagination from './Pagination'
 
 const Main = () => {
     const [results, setResults] = useState([])
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false) // loading state for spinner indicator
     const [searchQuery, setSearchQuery] = useState('')
     const [currentPage, setCurrentPage] = useState(1)
 
@@ -25,6 +25,7 @@ const Main = () => {
 
     const indexOfLastResult = currentPage * 10;
     const indexOfFirstResult = indexOfLastResult - 10;
+    // 10 is the number of results per page
     const currentResults = results.slice(indexOfFirstResult, indexOfLastResult);
 
 
@@ -39,7 +40,8 @@ const Main = () => {
             <Search handleSearch={handleSearch} setSearchQuery={setSearchQuery} loading={loading}/>
           </div>
           <Results results={currentResults} totalResults={results.length} loading={loading}/>
-         {results.length > 0 && results.length > 10 ? <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} totalResults={results.length}/> : null}
+         {results.length > 10 ? <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} totalResults={results.length}/> : null}
+         {/* Show prev/next buttons only if there are more than 10 results  */}
         </div>
     )
 }

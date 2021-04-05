@@ -21,20 +21,20 @@ const Categories = () => {
             setRandomFact(res.data.value)
             setLoading(false)
         })
-    }
+    } 
 
 
     return (
         <div className='categories'>
                 <h4>Choose category:</h4>
             <div className='categories-cnt'>
-                {categories.map(category => <h5 className='categories-item' onClick={() => {
+                {categories.map(category => <h5 key={category} className='categories-item' onClick={() => {
                     setCurrentCategory(category)
                 }}>{category}</h5>
                 )}
             </div>
             <div className='random-cnt'>
-            {currentCategory ? (<button className='categories-btn' onClick={getFactFromCategory}>{loading ? (<div class="lds-dual-ring"></div>): `Get random fact from ${currentCategory} category`}</button>) : null}
+            {currentCategory ? (<button className='categories-btn' onClick={getFactFromCategory}>{loading ? (<div className="lds-dual-ring"></div>) : `Get random fact from ${currentCategory} category`}</button>) : null}
             </div>
             {randomFact ? (<div className='random-fact'>
                 <h2>{randomFact}</h2>
