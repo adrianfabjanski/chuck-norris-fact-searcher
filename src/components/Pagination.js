@@ -4,22 +4,22 @@ const Pagination = ({currentPage, setCurrentPage, totalResults}) => {
     const totalPages = [];
 
 
-    for(let i = 1; i <=Math.ceil(totalResults / 10); i++) {
+    for(let i = 1; i <= Math.ceil(totalResults / 10); i++) {
         totalPages.push(i)
-    }
+    } // Push to pages array depending on results length
 
     const previousPage = () => {
         if(currentPage === 1) {
             return
-        }
+        }//Prevent from going below 0
 
         setCurrentPage(currentPage - 1)
-    }
+    } 
 
     const nextPage = () => {
         if(currentPage === totalPages.length) {
             return
-        }
+        } //Prevent from going beyond total pages
 
         setCurrentPage(currentPage + 1)
     }

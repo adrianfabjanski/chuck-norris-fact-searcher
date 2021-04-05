@@ -11,6 +11,17 @@ body {
   font-family: 'Mate SC', serif;
 }
 
+.rtl {
+  direction: rtl;
+}
+
+.absolute-btn {
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+}
+
+
 a {
   text-decoration: none;
   color: white;
@@ -22,6 +33,7 @@ a {
   width: 25%;
 display: flex;
 justify-content: center;
+direction: ltr;
 }
 
 .header-cnt h2 {
@@ -36,7 +48,14 @@ justify-content: center;
 
 .choice-item {
   padding: 0 10px 0 10px;
+  transition: 0.3s ease;
 }
+
+.choice-item:hover {
+  text-shadow: 0px 2px 3px rgba(22, 22, 22, 0.98);
+}
+
+
 
 
 .fact-searcher-cnt {
@@ -53,6 +72,7 @@ width: 300px;
 padding: 10px;
 border: none;
 outline: none;
+direction: ltr;
 }
 
 .submit-btn {
@@ -187,4 +207,39 @@ ul {
   box-shadow: -1px 9px 6px -4px rgba(0,0,0,0.55);
   -webkit-box-shadow: -1px 9px 6px -4px rgba(0,0,0,0.55);
   -moz-box-shadow: -1px 9px 6px -4px rgba(0,0,0,0.55);
+}
+
+/* Categories */
+
+.categories {
+  text-align: center;
+  color: white;
+}
+
+.categories-cnt {
+  display: flex;
+  justify-content: center;
+}
+
+.categories-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.categories-item:hover {
+  text-shadow: 0px 2px 3px rgba(22, 22, 22, 0.98);
+}
+
+.categories-btn {
+  width: 350px;
+  margin-top: 50px;
+  font-size: 20px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  background-color: rgba(112,64,13,0.8);
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: white;
 }

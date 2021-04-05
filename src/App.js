@@ -7,18 +7,28 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import Categories from './components/Categories';
 
 
 
 function App() {
+
+  const handleRtl = () => {
+    document.body.classList.toggle('rtl');
+  }
+
+
   return (
     <Router>
       <div className="App">
+        <div className='absolute-btn'>
+          <button onClick={handleRtl}>Toggle rtl</button>
+        </div>
       <div className='header-cnt'>
         <a href='/'>
             <h2>Chuck Norris</h2>
         </a>
-            <img src={chuck_img} height='120px' alt=''/> 
+            <img src={chuck_img} height='100px' alt=''/> 
           </div>
           <div className='choice-cnt'>
             <h4 className='choice-item'>
@@ -28,7 +38,7 @@ function App() {
             </h4>
             <h4 className='choice-item'>
             <a href='/random'>
-      Get random fact
+            Get random fact
             </a>
             </h4>
             <h4 className='choice-item'>
@@ -40,6 +50,7 @@ function App() {
           <Switch>
             <Route path='/search' component={Main} />
             <Route path='/random' component={Random} />
+            <Route path='/categories' component={Categories} />
           </Switch>
     </div>
     </Router>

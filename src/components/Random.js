@@ -16,7 +16,7 @@ const Random = () => {
         <div className='random-cnt'>
             <button className='random-btn' onClick={handleRandomFact}>{loading ? (<div class="lds-dual-ring"></div>): 'Get random fact!'}</button>
             {randomFact ? (<div className='random-fact'>
-            <h2 >{randomFact}</h2>
+            <h2>{randomFact}</h2>
             </div>) : null}
         </div>
     )

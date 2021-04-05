@@ -12,7 +12,7 @@ const Main = () => {
 
 
     const handleSearch = (e) => {
-        e.preventDefault()
+        e.preventDefault() // Prevent default submit behaviour
         setLoading(true)
         axios.get(`https://api.chucknorris.io/jokes/search?query=${searchQuery}`).then(res => {
             setResults(res.data.result)
