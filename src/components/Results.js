@@ -1,11 +1,14 @@
 import React from 'react'
 
-export const Results = ({results}) => {
+export const Results = ({results, totalResults}) => {
     return (
-        <div className='results-cnt'>
+            <div>
+                <h4 className='total-results'>{totalResults} results</h4>
+                <div className='results-cnt'>
         {results.map(fact => (
-            <p key={fact.id}>{fact.value}</p>
+            <p key={fact.id} className='results-item'>{fact.value}</p>
         ))}
     </div>
+            </div>
     )
 }
