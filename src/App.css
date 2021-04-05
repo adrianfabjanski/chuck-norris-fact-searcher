@@ -16,7 +16,7 @@ body {
 }
 
 .absolute-btn {
-  position: absolute;
+  position: fixed;
   bottom: 3%;
   right: 3%;
 }
@@ -53,6 +53,20 @@ direction: ltr;
 
 .choice-item:hover {
   text-shadow: 0px 2px 3px rgba(22, 22, 22, 0.98);
+}
+
+.home-description {
+  width: 50%;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 100px;
+  background-color: rgba(112,64,13,0.8);
+  border-radius: 10px;
+  box-shadow: -1px 9px 6px -4px rgba(0,0,0,0.55);
+  -webkit-box-shadow: -1px 9px 6px -4px rgba(0,0,0,0.55);
+  -moz-box-shadow: -1px 9px 6px -4px rgba(0,0,0,0.55);
 }
 
 
@@ -133,6 +147,7 @@ ul {
 
 .page-btn {
   padding: 5px;
+  border-radius: 20px;
   width: 100px;
   margin: 5px;
   border: none;
@@ -185,6 +200,7 @@ ul {
 
 .random-btn {
   width: 180px;
+  border-radius: 20px;
   margin-top: 50px;
   font-size: 20px;
   padding: 10px;
@@ -234,6 +250,7 @@ ul {
 .categories-btn {
   width: 350px;
   margin-top: 50px;
+  border-radius: 20px;
   font-size: 20px;
   padding: 10px;
   outline: none;

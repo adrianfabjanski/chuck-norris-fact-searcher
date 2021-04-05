@@ -8,6 +8,7 @@ import {
   Route,
 } from "react-router-dom";
 import Categories from './components/Categories';
+import Home from './components/Home';
 
 
 
@@ -48,6 +49,7 @@ function App() {
             </h4>
           </div>
           <Switch>
+            <Route exact path='/' component={Home} />
             <Route path='/search' component={Main} />
             <Route path='/random' component={Random} />
             <Route path='/categories' component={Categories} />
