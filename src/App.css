@@ -1,38 +1,76 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+
+
+body, html {
+  height: 100%;
+  background: linear-gradient(180deg, rgba(184,119,20,1) 0%, rgba(112,64,13,1) 100%);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  font-family: 'Mate SC', serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-cnt {
+  margin-top: 30px;
+display: flex;
+justify-content: center;
+}
+
+.header-cnt h2 {
+  color: white;
+  font-size: 50px;
+}
+
+.desc-cnt {
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-cnt {
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#search-input {
+width: 300px;
+padding: 10px;
+border: none;
+outline: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#submit-btn {
+  border: none;
+  outline: none;
+  padding: 10px;
+  color:white;
+  background-color: rgba(112,64,13,0.8);
+  cursor: pointer
+}
+
+.results-cnt {
+  width: 50%;
+  height: 550px;
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: auto;
+  overflow: auto;
+}
+
+ul {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  list-style: none;
+  display: flex;
+
+}
+
+.page-item {
+  padding: 5px;
+}
+
+.page-link {
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  cursor: pointer;
 }
