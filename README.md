@@ -17,6 +17,8 @@ Project is created with:
 * axios v0.21.1
 * tested with cypress v7.0.0
 * hosted with netlify
+* Styling with pure CSS
+* No state management was needed 
 	
 ## Setup
 To run this project, install it locally using npm:
