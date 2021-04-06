@@ -6,6 +6,7 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Testing](#testing)
 
 ## General info
 Chuckalmighty is a web application that allows to search Chuck Norris facts, using [the Chuck Norris facts API](https://api.chucknorris.io/).
