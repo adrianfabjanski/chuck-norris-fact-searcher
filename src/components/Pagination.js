@@ -11,7 +11,7 @@ const Pagination = ({currentPage, setCurrentPage, totalResults}) => {
     const previousPage = () => {
         if(currentPage === 1) {
             return
-        }//Prevent from going below 0
+        }//Prevent from going below 1
 
         setCurrentPage(currentPage - 1)
     } 
