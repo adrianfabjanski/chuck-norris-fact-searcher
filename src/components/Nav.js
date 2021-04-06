@@ -1,30 +1,31 @@
 import React from 'react'
 import chuck_img from '../img/chuck-cartoon.png'
+import {Link} from 'react-router-dom'
 
 const Nav = () => {
     return (
         <div>
             <div className='header-cnt'>
-        <a href='/'>
+        <Link to='/'>
             <h2>Chuck Norris</h2>
-        </a>
+        </Link>
             <img src={chuck_img} height='100px' alt=''/> 
           </div>
           <div className='choice-cnt'>
-            <h4 className='choice-item'>
-              <a href='/search'>
+            <h4 className='choice-item' id='choice-item-1'>
+              <Link to='/search'>
               Search for a fact
-              </a>
+              </Link>
             </h4>
-            <h4 className='choice-item'>
-            <a href='/random'>
+            <h4 className='choice-item' id='choice-item-2'>
+            <Link to='/random'>
             Get random fact
-            </a>
+            </Link>
             </h4>
-            <h4 className='choice-item'>
-              <a href='/categories'>
+            <h4 className='choice-item' id='choice-item-3'>
+              <Link to='/categories'>
               Get random fact from categories
-              </a>
+              </Link>
             </h4>
           </div>
         </div>

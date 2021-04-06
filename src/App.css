@@ -13,6 +13,7 @@ body {
 
 .rtl {
   direction: rtl;
+  unicode-bidi: embed;
 }
 
 .absolute-btn {
@@ -33,6 +34,7 @@ a {
   width: 25%;
 display: flex;
 justify-content: center;
+align-items: center;
 direction: ltr;
 }
 
@@ -212,9 +214,16 @@ ul {
   color: white;
 }
 
+.random-btn:hover{
+  box-shadow: -1px 9px 6px -4px rgba(0,0,0,0.55);
+  -webkit-box-shadow: -1px 9px 6px -4px rgba(0,0,0,0.55);
+  -moz-box-shadow: -1px 9px 6px -4px rgba(0,0,0,0.55);
+}
+
 .random-fact {
   margin: 0 auto;
   margin-top: 100px;
+  margin-bottom: 200px;
   width: 60%;
   color: white;
   background-color: rgba(112,64,13,0.8);
@@ -234,6 +243,7 @@ ul {
 
 .categories-cnt {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -248,7 +258,7 @@ ul {
 }
 
 .categories-btn {
-  width: 350px;
+  width: 30%;
   margin-top: 50px;
   border-radius: 20px;
   font-size: 20px;
@@ -259,4 +269,10 @@ ul {
   cursor: pointer;
   transition: 0.3s ease;
   color: white;
+}
+
+.categories-btn:hover {
+  box-shadow: -1px 9px 6px -4px rgba(0,0,0,0.55);
+  -webkit-box-shadow: -1px 9px 6px -4px rgba(0,0,0,0.55);
+  -moz-box-shadow: -1px 9px 6px -4px rgba(0,0,0,0.55);
 }
