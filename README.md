@@ -28,3 +28,11 @@ $ cd ../chuck_norris
 $ npm install
 $ npm start
 ```
+## Testing
+To run cypress tests:
+
+```
+$ cd chuck_norris
+$ npm install
+$ npx cypress open
+```
