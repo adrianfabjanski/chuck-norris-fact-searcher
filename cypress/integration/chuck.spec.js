@@ -63,53 +63,12 @@ it('should check if all categories work properly', () => {
             cy.get('.random-fact').should('be.visible')
         })
     })
-    cy.request('https://api.chucknorris.io/jokes/random?category=animal').then((response) => {
-        expect(response.status).to.eq(200)
-    })
-    cy.request('https://api.chucknorris.io/jokes/random?category=career').then((response) => {
-        expect(response.status).to.eq(200)
-    })
-    cy.request('https://api.chucknorris.io/jokes/random?category=celebrity').then((response) => {
-        expect(response.status).to.eq(200)
-    })
-    cy.request('https://api.chucknorris.io/jokes/random?category=dev').then((response) => {
-        expect(response.status).to.eq(200)
-    })
-    cy.request('https://api.chucknorris.io/jokes/random?category=explicit').then((response) => {
-        expect(response.status).to.eq(200)
-    })
-    cy.request('https://api.chucknorris.io/jokes/random?category=fashion').then((response) => {
-        expect(response.status).to.eq(200)
-    })
-    cy.request('https://api.chucknorris.io/jokes/random?category=food').then((response) => {
-        expect(response.status).to.eq(200)
-    })
-    cy.request('https://api.chucknorris.io/jokes/random?category=history').then((response) => {
-        expect(response.status).to.eq(200)
-    })
-    cy.request('https://api.chucknorris.io/jokes/random?category=money').then((response) => {
-        expect(response.status).to.eq(200)
-    })
-    cy.request('https://api.chucknorris.io/jokes/random?category=movie').then((response) => {
-        expect(response.status).to.eq(200)
-    })
-    cy.request('https://api.chucknorris.io/jokes/random?category=music').then((response) => {
-        expect(response.status).to.eq(200)
-    })
-    cy.request('https://api.chucknorris.io/jokes/random?category=political').then((response) => {
-        expect(response.status).to.eq(200)
-    })
-    cy.request('https://api.chucknorris.io/jokes/random?category=religion').then((response) => {
-        expect(response.status).to.eq(200)
-    })
-    cy.request('https://api.chucknorris.io/jokes/random?category=science').then((response) => {
-        expect(response.status).to.eq(200)
-    })
-    cy.request('https://api.chucknorris.io/jokes/random?category=sport').then((response) => {
-        expect(response.status).to.eq(200)
-    })
-    cy.request('https://api.chucknorris.io/jokes/random?category=travel').then((response) => {
-        expect(response.status).to.eq(200)
+    cy.request('https://api.chucknorris.io/jokes/categories').then(res => {
+        res.body.forEach(category => {
+            cy.request(`https://api.chucknorris.io/jokes/random?category=${category}`).then(res => {
+                expect(res.status).to.eq(200)
+            })
+        })
     })
 })
 

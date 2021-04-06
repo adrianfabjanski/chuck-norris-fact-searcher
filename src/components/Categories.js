@@ -23,7 +23,6 @@ const Categories = () => {
         })
     } 
 
-
     return (
         <div className='categories'>
                 <h4>Choose category:</h4>
