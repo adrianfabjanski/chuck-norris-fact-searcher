@@ -7,8 +7,8 @@ const AbsoluteButton = () => {
 
 
     return (
-        <div className='absolute-btn'>
-          <button onClick={handleRtl}>Toggle rtl</button>
+        <div className='absolute-btn-cnt'>
+          <button onClick={handleRtl} id='absolute-btn'>RTL</button>
         </div>
     )
 }
